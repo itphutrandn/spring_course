@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="developerBean" class="demo1.Developer"/>
+	<bean id="testerBean" class="demo1.Tester"/>
+
+	<bean id="OfficeBean" class="demo1.Office">
+		<property name="developer" ref="developerBean"/>
+		<property name="tester" ref="testerBean"/>
+	</bean>
+
+</beans>
